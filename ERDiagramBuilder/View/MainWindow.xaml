@@ -1,0 +1,29 @@
+﻿<Window x:Class="ERDiagramBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERDiagramBuilder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1200" Loaded="Window_Loaded">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="White" Panel.ZIndex="3">
+            
+            <StackPanel Grid.Row="0" Margin="5 40" x:Name="relationStyle" VerticalAlignment="Center">
+                <RadioButton Content="Ровная с прямыми углами" Margin="0 15"/>
+                <RadioButton Content="Без переломов" IsChecked="{Binding IsStraightLined}"/>
+                <Button Content="Подключить БД" Margin="5, 35" Click="ConnectDBButtonClick"/>
+            </StackPanel>
+            
+        </Grid>
+        <Canvas x:Name="mainField" Grid.Column="1" AllowDrop="True"  Background="LightGray">
+                
+        </Canvas>
+        
+    </Grid>
+</Window>

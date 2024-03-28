@@ -1,0 +1,21 @@
+﻿<Window x:Class="ERDiagramBuilder.DatabaseConnectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERDiagramBuilder"
+        mc:Ignorable="d"
+        Title="DatabaseConnectionWindow" Height="450" Width="450">
+    <Grid Margin="5" x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="connectionType" Margin="10 0">
+            
+        </ComboBox>
+        <Grid x:Name="gridForUserControl" Grid.Row="1"/>
+        <Button Content="Подключить" x:Name="connectBTN" Grid.Row="2" Width="120" Click="connectBTN_Click"/>
+    </Grid>
+</Window>
